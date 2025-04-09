@@ -30,7 +30,7 @@
     }
     
     
-    
+        -------------------------------------------------------------------------------------------------------
     
     
     
@@ -62,3 +62,19 @@
         DeleteCriticalSection(&cs);
         return 0;
     }
+
+    InitializeCriticalSection(&cs);
+
+    -------------------------------------------------------------------------------------------------------
+    
+    for (int i = 0; i < 20; i += 5) {
+        EnterCriticalSection(&cs);
+ 
+        LeaveCriticalSection(&cs);
+    }
+    
+
+    DeleteCriticalSection(&cs);
+
+
+
